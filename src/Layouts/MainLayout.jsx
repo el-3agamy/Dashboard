@@ -23,12 +23,26 @@ import { NavLink, Outlet } from 'react-router-dom';
 
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
-import { Stack } from '@mui/material';
+import { Avatar, Stack } from '@mui/material';
 
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PersonIcon from '@mui/icons-material/Person';
+
+import AccountBalanceOutlinedIcon from '@mui/icons-material/AccountBalanceOutlined';
+import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
+import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
+import ReceiptOutlinedIcon from '@mui/icons-material/ReceiptOutlined';
+import Person2OutlinedIcon from '@mui/icons-material/Person2Outlined';
+import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
+import HelpOutlinedIcon from '@mui/icons-material/HelpOutlined';
+import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
+import PieChartOutlineOutlinedIcon from '@mui/icons-material/PieChartOutlineOutlined';
+import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined';
+
+
+
 const drawerWidth = 240;
 
 
@@ -170,6 +184,68 @@ export default function MainLayout() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
+  const firstList = [
+    {
+      name : "Dashboard" ,
+      icon :  <AccountBalanceOutlinedIcon /> ,
+      "path" :  ""
+    },
+    {
+      name : "Mange Team" ,
+      icon :  <GroupsOutlinedIcon />,
+      "path" :  "team"
+    },
+    {
+      name : "Contacts" ,
+      icon : <ContactsOutlinedIcon/> ,
+      "path" :  "contacts"
+    },
+    {
+      name : "Invoices" ,
+      icon :  <ReceiptOutlinedIcon /> ,
+      "path" :  "invoices"
+    },
+   
+   
+  ] ;
+
+  const secondList = [
+    {
+      name : "Profile Form" ,
+      icon :  <Person2OutlinedIcon /> ,
+      "path" :  "profile"
+    },
+    {
+      name : "Calendar" ,
+      icon :  <CalendarMonthOutlinedIcon />,
+      "path" :  "calendar"
+    },
+    {
+      name : "FAQ Page" ,
+      icon : <HelpOutlinedIcon/> ,
+      "path" :  "faq"
+    }   
+  ] ;
+
+
+  const chartsList = [
+    {
+      name : "Bar Chart" ,
+      icon :  <BarChartOutlinedIcon /> ,
+      "path" :  "barChart"
+    },
+    {
+      name : "Pie Chart" ,
+      icon :  <PieChartOutlineOutlinedIcon />,
+      "path" :  "pieChart"
+    },
+    {
+      name : "Line Chart" ,
+      icon : <TimelineOutlinedIcon/> ,
+      "path" :  "lineChart"
+    }   
+  ]
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -232,17 +308,25 @@ export default function MainLayout() {
 
         </Toolbar>
       </AppBar>
+      {/* ///////////////// begaining of sidebare /////////////////// */}
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
         </DrawerHeader>
+            <Divider />
+        <Avatar alt="Admin" 
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Matthew_McConaughey_2019_(48648344772).jpg/440px-Matthew_McConaughey_2019_(48648344772).jpg" 
+        sx={{mx:"auto" , my: 2 , border : "2px gray solid" , width : open ? 80 : 40 , height : open ? 80 : 40}}/>
+        <Typography sx={{alignSelf:"center" , fontSize:open ? 20 : 0}}>Saeid Mhmd</Typography>
+        <Typography sx={{alignSelf:"center" , fontSize:open ? 14 : 0}}>Admin</Typography>
         <Divider />
+
         <List>
-          {['Home', 'Team', 'Invoices', 'Contacts'].map((text, index) => (
-            <NavLink to={text.toLocaleLowerCase()}>
-              <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+          {firstList.map((item, index) => (
+            <NavLink to={item.path}  style={{textDecoration:"none" , color:"inherit"}}>
+              <ListItem key={index} disablePadding sx={{ display: 'block' }}>
                 <ListItemButton
                   sx={[
                     {
@@ -273,10 +357,10 @@ export default function MainLayout() {
                         },
                     ]}
                   >
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                    {item.icon}
                   </ListItemIcon>
                   <ListItemText
-                    primary={text}
+                    primary={item.text}
                     sx={[
                       open
                         ? {
@@ -286,16 +370,20 @@ export default function MainLayout() {
                           opacity: 0,
                         },
                     ]}
-                  />
+                  > {item.name} </ListItemText>
                 </ListItemButton>
               </ListItem>
             </NavLink>
           ))}
         </List>
+
         <Divider />
+
+
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+          {secondList.map((item, index) => (
+           <NavLink to={item.path}  style={{textDecoration:"none" , color:"inherit"}}>
+               <ListItem key={item.index} disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={[
                   {
@@ -326,10 +414,10 @@ export default function MainLayout() {
                       },
                   ]}
                 >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {item.icon}
                 </ListItemIcon>
                 <ListItemText
-                  primary={text}
+                  primary={item.name}
                   sx={[
                     open
                       ? {
@@ -339,11 +427,69 @@ export default function MainLayout() {
                         opacity: 0,
                       },
                   ]}
-                />
+                >  {item.name} </ListItemText>
               </ListItemButton>
             </ListItem>
+           </NavLink>
           ))}
         </List>
+
+        <Divider />
+          
+        <List>
+          {chartsList.map((item, index) => (
+            <NavLink to={item.path} style={{textDecoration:"none" , color:"inherit"}}>
+              <ListItem key={item.index} disablePadding sx={{ display: 'block' }}>
+              <ListItemButton
+                sx={[
+                  {
+                    minHeight: 48,
+                    px: 2.5,
+                  },
+                  open
+                    ? {
+                      justifyContent: 'initial',
+                    }
+                    : {
+                      justifyContent: 'center',
+                    },
+                ]}
+              >
+                <ListItemIcon
+                  sx={[
+                    {
+                      minWidth: 0,
+                      justifyContent: 'center',
+                    },
+                    open
+                      ? {
+                        mr: 3,
+                      }
+                      : {
+                        mr: 'auto',
+                      },
+                  ]}
+                >
+                  {item.icon}
+                </ListItemIcon>
+                <ListItemText
+                  primary={item.name}
+                  sx={[
+                    open
+                      ? {
+                        opacity: 1,
+                      }
+                      : {
+                        opacity: 0,
+                      },
+                  ]}
+                >   {item.name} </ListItemText>
+              </ListItemButton>
+            </ListItem>
+            </NavLink>
+          ))}
+        </List>
+
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
