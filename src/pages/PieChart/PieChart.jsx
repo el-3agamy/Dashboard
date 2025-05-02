@@ -1,6 +1,6 @@
 import React from 'react'
 import { ResponsivePie } from '@nivo/pie'
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 const PieChart = () => {
 
   
@@ -40,9 +40,12 @@ const PieChart = () => {
   return (
     <>
       <Box sx={{height:"75vh"}}>
+        <Typography sx={{color:"red" , textAlign : "center" , fontSize:24 , pt:"40px"}}>
+                   Pie Chart Analysis
+                </Typography>
       <ResponsivePie
         data={data}
-        margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+        margin={{ top: 30, right: 80, bottom: 80, left: 80 }}
         innerRadius={0.5}
         padAngle={0.7}
         cornerRadius={3}

@@ -11,6 +11,9 @@ import { Stack } from '@mui/material';
 const FAQ = () => {
   return (
     <Stack direction={"column"} rowGap={3}>
+      <Typography sx={{color:"red" , textAlign : "center" , fontSize:24 , pt:"50px"}}>
+               Frequant Questions
+          </Typography>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}

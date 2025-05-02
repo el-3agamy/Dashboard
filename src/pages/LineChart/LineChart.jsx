@@ -1,6 +1,6 @@
 import React from 'react'
 import { ResponsiveLine } from '@nivo/line'
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 
 const LineChart = () => {
 
@@ -270,13 +270,16 @@ const LineChart = () => {
         }
       ]
     }
-  ]
+  ] 
   return (
     <>
     <Box sx={{height : "75vh"}}>
+      <Typography sx={{color:"red" , textAlign : "center" , fontSize:24 , pt:"50px"}}>
+                Line Chart Analysis
+              </Typography>
     <ResponsiveLine
         data={data}
-        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        margin={{ top: 30, right: 110, bottom: 50, left: 60 }}
         xScale={{ type: 'point' }}
         yScale={{
             type: 'linear',

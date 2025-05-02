@@ -1,6 +1,6 @@
 import React from 'react'
 import { ResponsiveChoropleth } from '@nivo/geo'
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import geo from './WorldData'
 
 const Geography = () => {
@@ -694,7 +694,9 @@ const Geography = () => {
   return (
     <>
     <Box sx={{height:"75vh"}}>
-
+    <Typography sx={{color:"red" , textAlign : "center" , fontSize:24 , mb:"40px"}}>
+           Our Clients Disterbution
+        </Typography>
     <ResponsiveChoropleth
         data={data}
         features={geo.features}

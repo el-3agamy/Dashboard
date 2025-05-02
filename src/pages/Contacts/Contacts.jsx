@@ -4,13 +4,16 @@ import Box from '@mui/material/Box';
 import rows from '../../Data/TeamData';
 import {columns} from '../../Data/TeamData';
 import { Toolbar, ToolbarButton } from '@mui/x-data-grid';
-
+import { Typography } from '@mui/material';
 
 
 const Contacts = () => {
  
   return (
-    <Box sx={{ height: 500, width: '100%' }}>
+    <Box sx={{ height: 500, width: '100%' }} >
+      <Typography sx={{color:"red" , textAlign : "center" , fontSize:24 , marginBottom:5}}>
+        Team Contacts
+    </Typography>
     <DataGrid
       rows={rows}
       columns={columns}

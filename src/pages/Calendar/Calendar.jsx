@@ -7,6 +7,7 @@ import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import { INITIAL_EVENTS, createEventId } from '../Calendar/event-utils'
 import "./Calendar.css"
+import { Box, Typography } from '@mui/material'
 
 const Calendar = () => {
   const [weekendsVisible, setWeekendsVisible] = useState(true)
@@ -41,9 +42,15 @@ const Calendar = () => {
 
   function handleEvents(events) {
     setCurrentEvents(events)
-  }
+  } 
   return (
+  <>
+  <Box>
+    <Typography sx={{color:"red" , textAlign : "center" , fontSize:24}}>
+             Scheduled Events
+    </Typography>
     <div className='demo-app'>
+      
       <Sidebar
         weekendsVisible={weekendsVisible}
         handleWeekendsToggle={handleWeekendsToggle}
@@ -76,6 +83,8 @@ const Calendar = () => {
         />
       </div>
     </div>
+    </Box>
+  </>
   )
 }
 

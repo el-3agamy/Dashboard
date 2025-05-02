@@ -57,6 +57,9 @@ const handleClose = (event, reason) => {
   return (
     <>
       <Stack sx={{ width: "75%", textAlign: "center", margin: "auto" }}>
+        <Typography sx={{color:"red" , textAlign : "center" , fontSize:24 , pt:"50px" , mb:"30px"}}>
+                           Create New Account
+        </Typography>
         <form onSubmit={handleSubmit}>
           <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
             <Stack direction="row" justifyContent="space-between" sx={{gap : 2}}>

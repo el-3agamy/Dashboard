@@ -1,6 +1,6 @@
 import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 const BarChart = () => {
     const data = [
@@ -42,8 +42,11 @@ const BarChart = () => {
       
   return(
     <>
+   
     <Box sx={{height : "75vh"}}>
-
+    <Typography sx={{color:"red" , textAlign : "center" , fontSize:24}}>
+        Bar Chart Analysis
+    </Typography>
     <ResponsiveBar
         data={data}
         keys={[
@@ -53,7 +56,7 @@ const BarChart = () => {
             
         ]}
         indexBy="year"
-        margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+        margin={{ top: 10, right: 130, bottom: 50, left: 60 }}
         padding={0.3}
         valueScale={{ type: 'linear' }}
         indexScale={{ type: 'band', round: true }}

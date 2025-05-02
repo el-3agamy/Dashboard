@@ -3,6 +3,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import Box from '@mui/material/Box';
 import rows from '../../Data/TeamData';
 import {columns} from '../../Data/TeamData';
+import { Typography } from '@mui/material';
 
 
 // console.log(columns.length);
@@ -18,10 +19,12 @@ import {columns} from '../../Data/TeamData';
 //   { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
 //   { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
 // ];
-
 const Team = () => {
   return (
     <Box sx={{ height: 500, width: '100%' }}>
+      <Typography sx={{color:"red" , textAlign : "center" , fontSize:24 ,  mb:"30px"}}>
+                         Our Team
+                      </Typography>
     <DataGrid
       rows={rows}
       columns={columns}
