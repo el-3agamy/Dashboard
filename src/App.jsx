@@ -13,6 +13,7 @@ import BarChart from './pages/BarChart/BarChart'
 import LineChart from './pages/LineChart/LineChart'
 import PieChart from './pages/PieChart/PieChart'
 import "./App.css"
+import Geography from './pages/Geography/Geography'
 const App = () => {
   const router = createBrowserRouter([
     {path:"" , element:<MainLayout /> , children :( [
@@ -27,6 +28,7 @@ const App = () => {
       {path : "barChart" , element : <BarChart />} ,
       {path : "lineChart" , element : <LineChart/>} ,
       {path : "pieChart" , element : <PieChart/>} ,
+      {path : "geography" , element : <Geography/>} ,
     ])
   }])
   return (
