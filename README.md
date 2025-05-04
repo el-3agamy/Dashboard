@@ -1,12 +1,37 @@
-# React + Vite
+# Admin Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Admin Dashboard web application built with **React**, **React Router DOM**, **Material UI**, **Nivo Charts**, and **FullCalendar**. This project features a sleek user interface, powerful chart visualizations, and seamless navigation across 10 key pages.
 
-Currently, two official plugins are available:
+## 🔥 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚛️ **React** for building fast and modular UI
+- 🔀 **React Router DOM** for client-side routing
+- 🎨 **Material UI** for elegant design components
+- 📊 **Nivo** for rich, interactive charting
+- 📅 **FullCalendar** for advanced calendar functionality
+- 🔒 Component-based and easily extensible
 
-## Expanding the ESLint configuration
+## 📄 Pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The application includes the following 10 pages:
+
+1. **Dashboard (Home)** – Overview of key metrics and activity
+2. **Calendar** – Interactive scheduling with FullCalendar
+3. **Line Chart** – Visualize trends over time
+4. **Pie Chart** – Display category distributions
+5. **Bar Chart** – Compare values across categories
+6. **Geography Chart** – Visual data on a map
+7. **Team** – Manage team members
+8. **Contacts** – List and manage contacts
+9. **Invoices** – Track billing information
+10. **FAQ** – Frequently asked questions
+
+## 🛠 Tech Stack
+
+- **Frontend:** React, JavaScript (ES6+)
+- **Routing:** React Router DOM
+- **UI Library:** Material UI
+- **Charts:** Nivo
+- **Calendar:** FullCalendar
+
+
