@@ -695,7 +695,7 @@ const Geography = () => {
     <>
     <Box sx={{height:"75vh"}}>
     <Typography sx={{color:"red" , textAlign : "center" , fontSize:24 , mb:"40px"}}>
-           Our Clients Disterbution
+           Our Clients Distribution 
         </Typography>
     <ResponsiveChoropleth
         data={data}

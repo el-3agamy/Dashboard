@@ -56,11 +56,11 @@ const BarChart = () => {
             
         ]}
         indexBy="year"
-        margin={{ top: 10, right: 130, bottom: 50, left: 60 }}
+        margin={{ top: 10, right: 90, bottom: 50, left: 60 }}
         padding={0.3}
         valueScale={{ type: 'linear' }}
         indexScale={{ type: 'band', round: true }}
-        colors={{ scheme: 'blue_green' }}
+        colors={{ scheme: 'dark2' }}
         defs={[
             {
                 id: 'dots',

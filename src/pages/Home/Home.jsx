@@ -10,17 +10,20 @@ import LineChart from '../LineChart/LineChart'
 import PieChart from '../PieChart/PieChart'
 import Profile from '../Profile/Profile'
 import Team from '../Team/Team'
+import Row1 from './Row1'
 const Home = () => {
   return (
-    <Box component={"div"} sx={{display : "flex" , flexDirection : "column" , rowGap: 10}} >
+    <Box component={"div"} sx={{display : "flex" , flexDirection : "column" , rowGap: 10 , maxWidth:"100%"}} >
+      <Row1 />
       <BarChart />
-      <Calendar />
-      <Contacts />
-      <FAQ />
-      <Geography />
-      {/* <Invoices /> */}
       <LineChart />
       <PieChart />
+
+      <Calendar />
+      {/* <Contacts /> */}
+      {/* <FAQ /> */}
+      <Geography />
+      {/* <Invoices /> */}
       <Profile />
       {/* <Team /> */}
 

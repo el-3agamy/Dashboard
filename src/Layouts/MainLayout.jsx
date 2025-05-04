@@ -43,7 +43,7 @@ import PieChartOutlineOutlinedIcon from '@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from '@mui/icons-material/TimelineOutlined';
 
 
-
+import  "./MainLayout.css";
 const drawerWidth = 240;
 
 
@@ -201,11 +201,11 @@ export default function MainLayout() {
       icon : <ContactsOutlinedIcon/> ,
       "path" :  "contacts"
     },
-    {
-      name : "Invoices" ,
-      icon :  <ReceiptOutlinedIcon /> ,
-      "path" :  "invoices"
-    },
+    // {
+    //   name : "Invoices" ,
+    //   icon :  <ReceiptOutlinedIcon /> ,
+    //   "path" :  "invoices"
+    // },
    
    
   ] ;
